@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitsubishi Pajero Sport</title>
+
+    <style>
+        /* ========== GLOBAL DARK FUTURISTIC THEME ========== */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: radial-gradient(circle at top, #020617 0, #020617 45%, #000 100%);
+            color: #e5e7eb;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.92);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+        }
+
+        .title {
+            margin: 0;
+            font-size: 26px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+        }
+
+        .back-button {
+            text-decoration: none;
+            background: linear-gradient(to right, #4f46e5, #06b6d4);
+            padding: 10px 16px;
+            color: white;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+        }
+
+        /* HERO IMAGE */
+        .hero {
+            margin: 25px auto;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+        }
+
+        .hero img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ========== ENHANCED DETAIL SECTION ========== */
+        .detail-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 25px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .detail-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85));
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #38bdf8);
+            background-size: 200% 100%;
+            animation: gradientFlow 3s ease-in-out infinite;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(56, 189, 248, 0.6);
+            box-shadow: 
+                0 25px 50px rgba(15, 23, 42, 0.8),
+                0 0 40px rgba(56, 189, 248, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-card.history {
+            grid-column: span 2;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .detail-card:hover .card-icon {
+            transform: rotate(10deg) scale(1.1);
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.5);
+        }
+
+        .detail-card h3 {
+            color: #f8fafc;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+        }
+
+        .detail-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .spec-item {
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .spec-item:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .spec-label {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .spec-value {
+            color: #f8fafc;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .highlight-text {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #38bdf8;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .detail-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .detail-card.history {
+                grid-column: span 1;
+            }
+            
+            .spec-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="title">Mitsubishi Pajero Sport</h1>
+        <a href="../index.html" class="back-button">← Kembali</a>
+    </header>
+
+    <section class="hero">
+        <img src="/images/Pajero.jpg" alt="Mitsubishi Pajero Sport">
+    </section>
+
+    <div class="detail-container">
+        <div class="detail-card history">
+            <div class="card-icon">🚙</div>
+            <h3>Sejarah Mitsubishi Pajero Sport</h3>
+            <p>
+                Mitsubishi Pajero Sport adalah SUV berbasis pickup Triton yang diperkenalkan pada tahun <span class="highlight-text">1996</span>. Mobil ini dirancang untuk menghadirkan kombinasi performa tangguh, kemampuan off-road, dan kenyamanan kabin premium bagi keluarga.
+            </p>
+            <p>
+                Pajero Sport populer di Asia, Australia, dan Timur Tengah sebagai SUV tangguh untuk petualangan maupun penggunaan sehari-hari. Mobil ini dilengkapi dengan interior modern, sistem hiburan, kursi nyaman, dan fitur keselamatan canggih seperti ABS, EBD, dan kontrol stabilitas elektronik.
+            </p>
+        </div>
+
+        <div class="detail-card">
+            <div class="card-icon">🌍</div>
+            <h3>Kota Asal</h3>
+            <p>
+                <span class="pulse-dot"></span>
+                Diproduksi di <strong>Mitsubishi Motors Plant, Thailand</strong>
+            </p>
+            <p>
+                Dan beberapa pabrik Mitsubishi di Asia Tenggara, menjamin kualitas tinggi dan ketahanan kendaraan.
+            </p>
+        </div>
+
+        <div class="detail-card">
+            <div class="card-icon">⚙️</div>
+            <h3>Spesifikasi Mesin</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Mesin</div>
+                    <div class="spec-value">2.4L Diesel Turbo</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Tenaga</div>
+                    <div class="spec-value">181–225 HP</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Torsi</div>
+                    <div class="spec-value">430–440 Nm</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Transmisi</div>
+                    <div class="spec-value">6MT / 8AT</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Drivetrain</div>
+                    <div class="spec-value">2WD / 4WD</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Top Speed</div>
+                    <div class="spec-value">±180 km/h</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">0–100 km/h</div>
+                    <div class="spec-value">±10–12 detik</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Tipe</div>
+                    <div class="spec-value">SUV 7 Kursi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced interactivity for detail cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.detail-card');
+            const specItems = document.querySelectorAll('.spec-item');
+            
+            // Add staggered animation on load
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+            
+            // Enhanced hover effects for cards
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // Interactive spec items with click feedback
+            specItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Create ripple effect
+                    const ripple = document.createElement('div');
+                    ripple.style.position = 'absolute';
+                    ripple.style.width = '20px';
+                    ripple.style.height = '20px';
+                    ripple.style.background = 'rgba(56, 189, 248, 0.6)';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.transform = 'translate(-50%, -50%)';
+                    ripple.style.pointerEvents = 'none';
+                    ripple.style.animation = 'rippleEffect 0.6s ease-out';
+                    
+                    const rect = this.getBoundingClientRect();
+                    ripple.style.left = '50%';
+                    ripple.style.top = '50%';
+                    
+                    this.style.position = 'relative';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => ripple.remove(), 600);
+                    
+                    // Add pulse animation
+                    this.style.animation = 'specPulse 0.3s ease';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 300);
+                });
+            });
+            
+            // Parallax effect on hero image
+            const hero = document.querySelector('.hero img');
+            if (hero) {
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.pageYOffset;
+                    const parallax = scrolled * 0.5;
+                    hero.style.transform = `translateY(${parallax}px)`;
+                });
+            }
+            
+            // Add CSS for ripple and pulse animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes rippleEffect {
+                    to {
+                        width: 100px;
+                        height: 100px;
+                        opacity: 0;
+                    }
+                }
+                
+                @keyframes specPulse {
+                    0%, 100% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(0.95);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+
+    <footer class="footer">
+        © 2025 Car Showcase — Mitsubishi Pajero Sport Detail Page
+    </footer>
+
+</body>
+</html>

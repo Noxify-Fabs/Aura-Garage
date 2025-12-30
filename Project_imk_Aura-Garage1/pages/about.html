@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Aura Garage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(31, 41, 55, 0.9) 100%), 
+                  url('../images/showroom-interior.jpg') center/cover no-repeat;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(34, 211, 238, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Header -->
+  <header class="bg-gray-900/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-800">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Aura Garage
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="../index.html" class="nav-link">Beranda</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="about.html" class="nav-link text-cyan-400">Tentang Kami</a>
+          <a href="#contact" class="nav-link">Kontak</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-hero pt-32 pb-20 px-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+          Tentang Aura Garage
+        </span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Menyediakan pengalaman terbaik dalam kepemilikan kendaraan mewah sejak 2015
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Siapa Kami?</h2>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Aura Garage adalah destinasi utama bagi para pecinta mobil mewah di Indonesia. Sejak didirikan pada tahun 2015, kami telah membantu ribuan pelanggan menemukan kendaraan impian mereka dengan layanan yang terpercaya dan profesional.
+          </p>
+          <p class="text-gray-300 mb-8 leading-relaxed">
+            Kami bangga menjadi mitra resmi dari berbagai merek mobil mewah ternama dunia, menawarkan kendaraan berkualitas tinggi dengan layanan purna jual yang tak tertandingi.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-800/50 p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-cyan-400 mb-2">8+</div>
+              <div class="text-sm text-gray-300">Tahun Pengalaman</div>
+            </div>
+            <div class="bg-gray-800/50 p-4 rounded-xl text-center">
+              <div class="text-3xl font-bold text-cyan-400 mb-2">1000+</div>
+              <div class="text-sm text-gray-300">Mobil Terjual</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-800/50 rounded-2xl overflow-hidden">
+          <img src="../images/showroom-interior.jpg" alt="Showroom Aura Garage" class="w-full h-auto rounded-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="py-16 bg-gray-800/30">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Nilai-Nilai Kami</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Komitmen kami untuk memberikan pelayanan terbaik kepada setiap pelanggan</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800/50 p-8 rounded-2xl hover:bg-gray-700/50 transition-colors">
+          <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-4">
+            <i class="fas fa-shield-alt text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Kepercayaan</h3>
+          <p class="text-gray-400">Transparansi dan integritas adalah fondasi dari setiap interaksi kami dengan pelanggan.</p>
+        </div>
+        
+        <div class="bg-gray-800/50 p-8 rounded-2xl hover:bg-gray-700/50 transition-colors">
+          <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-4">
+            <i class="fas fa-award text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Kualitas</h3>
+          <p class="text-gray-400">Setiap kendaraan melalui inspeksi menyeluruh untuk memastikan kualitas terbaik.</p>
+        </div>
+        
+        <div class="bg-gray-800/50 p-8 rounded-2xl hover:bg-gray-700/50 transition-colors">
+          <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-4">
+            <i class="fas fa-users text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Layanan Pelanggan</h3>
+          <p class="text-gray-400">Tim kami siap membantu Anda menemukan kendaraan yang sempurna untuk kebutuhan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Tim Profesional Kami</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Bergabunglah dengan tim ahli yang berdedikasi untuk melayani Anda</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="team-card bg-gray-800/50 p-6 rounded-2xl text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <i class="fas fa-user text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">John Doe</h3>
+          <p class="text-cyan-400 mb-3">CEO & Founder</p>
+          <p class="text-gray-300 text-sm">Dengan pengalaman 15+ tahun di industri otomotif, John memimpin Aura Garage dengan visi yang jelas.</p>
+        </div>
+        
+        <div class="team-card bg-gray-800/50 p-6 rounded-2xl text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <i class="fas fa-user text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Jane Smith</h3>
+          <p class="text-cyan-400 mb-3">Sales Manager</p>
+          <p class="text-gray-300 text-sm">Jane memastikan setiap pelanggan mendapatkan pengalaman pembelian yang luar biasa.</p>
+        </div>
+        
+        <div class="team-card bg-gray-800/50 p-6 rounded-2xl text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <i class="fas fa-user text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Mike Johnson</h3>
+          <p class="text-cyan-400 mb-3">Technical Director</p>
+          <p class="text-gray-300 text-sm">Mike memastikan setiap kendaraan memenuhi standar kualitas tertinggi kami.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 px-6">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Siap Menemukan Mobil Impian Anda?</h2>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        Tim kami siap membantu Anda menemukan kendaraan yang sempurna sesuai dengan kebutuhan dan anggaran Anda.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="../index.html#inventory" class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors">
+          <i class="fas fa-car"></i>
+          Lihat Inventaris
+        </a>
+        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-colors">
+          <i class="fas fa-phone"></i>
+          Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 border-t border-gray-800 text-gray-300 py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="../images/car-logo.jpg" alt="Aura Garage Logo" class="h-8 w-auto">
+            <span class="text-xl font-bold text-white">Aura Garage</span>
+          </div>
+          <p class="text-sm text-gray-400">
+            Destinasi utama untuk mobil mewah berkualitas tinggi dengan layanan terpercaya.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../index.html" class="hover:text-cyan-400 transition-colors">Home</a></li>
+            <li><a href="#inventory" class="hover:text-cyan-400 transition-colors">Inventory</a></li>
+            <li><a href="blog.html" class="hover:text-cyan-400 transition-colors">Blog</a></li>
+            <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Sales</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Financing</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Insurance</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Service</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="tel:18002011019" class="hover:text-cyan-400 transition-colors">1-800-201-1019</a></li>
+            <li><a href="mailto:info@auragarage.com" class="hover:text-cyan-400 transition-colors">info@auragarage.com</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">20619 Torrence Chapel Rd, Cornelius, NC 28031</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2023 Aura Garage. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
